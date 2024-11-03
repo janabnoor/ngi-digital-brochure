@@ -1,0 +1,291 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+	position: relative;
+}
+
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+#flipbook {
+    width: 800px;
+    height: 600px;
+    background-color: #FFFFE0; /* Light yellow background */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    position: relative;
+    z-index: 1;	
+
+	
+
+
+
+}
+
+
+.page1, .page2, .page3 , .page4 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #ffffff;
+}
+
+
+
+.page1 .content,.page2 .content, .page3 .content , .page4 .content{
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Media query for tablets (up to 768px) */
+@media (max-width: 768px) {
+    .page2 .content {
+        padding: 5px; /* Reduce padding on tablets */
+    }
+}
+
+/* Media query for mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .page2 .content {
+        padding: 2px; /* Further reduce padding on mobile phones */
+    }
+}
+
+
+
+
+
+
+
+
+
+.page2 .division {
+    flex: 1; /* Make the divisions take up equal space */
+    margin: 10px; /* Add some space between the divisions */
+    text-align: center;
+}
+
+
+.page3 .division {
+    flex: 1; /* Make the divisions take up equal space */
+    margin: 10px; /* Add some space between the divisions */
+    text-align: center;
+}
+
+
+.page4 .division {
+    flex: 1; /* Make the divisions take up equal space */
+    margin: 10px; /* Add some space between the divisions */
+    text-align: center;
+}
+
+
+.page1 .division img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire div */
+}
+
+.page2 .division img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire div */
+}
+
+.page3 .division img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire div */
+}
+
+.page4 .division img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire div */
+}
+
+
+
+
+
+
+
+.marquee-container {
+    width: 100%; /* Ensures the container is as wide as the content */
+    overflow: hidden; /* Hides any overflow */
+    margin-top: 10px; /* Adds space between the image and the marquee */
+    text-align: center;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap; /* Prevents text wrapping */
+    font-size: 15px;
+    font-weight: bold;
+    color: #8B0000; /* Dark red color */
+    animation: bounce 10s linear infinite; /* Adjusted speed for better visibility */
+}
+
+
+.marquee {
+        position: absolute;
+	bottom: 0px; /* Position at the bottom */
+       
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #8B0000; /* Dark red color */
+        z-index: 10;
+        white-space: nowrap;
+        animation: bounce 40s ease-in-out infinite;
+    }
+
+
+    @keyframes bounce {
+        100% {
+            transform: translateX(-15%);
+        }
+        50% {
+            transform: translateX(50%);
+        }
+       100% {
+            transform: translateX(-15%);
+        }
+    }
+
+
+
+.page1 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.page2 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+position: relative; /* Ensure the content div is the reference point */
+}
+
+.page3 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.page4 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+
+
+.division a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page3 .division a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page4 .division a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.division p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+
+.page2 .division p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.page3 .division p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.page4 .division p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+	z-index: 2; /* Ensure the arrows are above the flipbook */
+
+}
+
+#left-arrow {
+    left: -5px; /* Adjust to position the arrow overlapping the left side */
+}
+
+#right-arrow {
+    right: -5px; /* Adjust to position the arrow overlapping the right side */
+}
+
+
+
+.arrow img {
+    width: 100%;
+    height: 100%;
+}
